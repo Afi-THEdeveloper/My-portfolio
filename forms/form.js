@@ -7,7 +7,7 @@ function validate(){
     const messageError = document.getElementById('error_message');
 
     console.log(name);
-    const patternName = /[0-9(),-_.,]/;
+    const patternName = /[\w\s\][,][0-9]/gi;
 
     if(name.length<=3){
         nameError.innerHTML = "Name Must be 3 or more character longer"
